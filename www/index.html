@@ -23,14 +23,18 @@
 </head>
 <body ng-app="starter" ng-controller="MainCtrl">
 <ion-header-bar>
-    <h1 class="title">Photo Test</h1>
+    <h1 class="title">Base64 jpg Photo Test</h1>
 </ion-header-bar>
 <ion-content padding="true">
-    <button ng-click="getPhoto()" class="button button-block button-primary">Take Photo</button>
-    <img ng-src="{{lastPhoto}}" style="max-width: 100%">
+    <button ng-click="getPhoto()" class="button button-block button-assertive">Take Photo</button>
+    <button ng-click="savePhoto()" class="button button-block button-primary">Save Photo</button>
     <ion-item>
+        <h3>Captured last image</h3>
+        <img ng-src="{{lastPhoto}}" style="max-width: 100%">
+    </ion-item>
+    <ion-item>
+        <h3>Base64 image</h3>
         <img ng-src="{{thumb}}" style="max-width: 100%">
-        <button ng-click="savePhoto()" class="button button-primary">Save Photo</button>
     </ion-item>
 </ion-content>
 </body>

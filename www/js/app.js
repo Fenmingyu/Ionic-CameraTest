@@ -46,7 +46,9 @@ angular.module('starter', ['ionic'])
 
         $scope.getPhoto = function () {
             var options = {
+                'title': 'Do you want to base64:jpg image?',
                 'buttonLabels': ['Take Picture'],
+                'androidEnableCancelButton' : true, // default false
                 'addCancelButtonWithLabel': 'Cancel'
             };
             window.plugins.actionsheet.show(options, callback);
